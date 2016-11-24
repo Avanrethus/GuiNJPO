@@ -133,10 +133,25 @@ public class Kalkulator extends javax.swing.JFrame {
         
         int a = Integer.parseInt(jTextField1.getText());
         int b = Integer.parseInt(jTextField2.getText());
-        if(jRadioButton1.isEnabled()){
+        if(jRadioButton1.isSelected()== true){
             int suma = a+b;
-            JOptionPane.showMessageDialog(rootPane, "Wynik: "+suma);
+            JOptionPane.showMessageDialog(rootPane, "Wynik: "+ suma);
         }
+        else if(jRadioButton2.isSelected()== true){
+            int roznica = a-b;
+            JOptionPane.showMessageDialog(rootPane, "Wynik: " + roznica);
+        }
+        else if(jRadioButton3.isSelected()== true){
+            int iloczyn = a*b;
+            JOptionPane.showMessageDialog(rootPane, "Wynik: "+ iloczyn);
+        }
+        else if(jRadioButton4.isSelected() == true){
+            float iloraz = (float)a/(float)b;
+            JOptionPane.showMessageDialog(rootPane, "Wynik: "+iloraz);
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane,"Nie wybrano działania!");
+        }    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
